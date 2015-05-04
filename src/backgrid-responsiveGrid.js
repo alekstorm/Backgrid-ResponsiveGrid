@@ -97,7 +97,7 @@
       this.$el.parents('.grid-responsive-wrapper').append($tableCopy);
 
       //wrap the clone in a div to make it behave as pinned columns
-      $tableCopy.wrap('<div class="grid-pinned" />');
+      $tableCopy.wrap('<div class="grid-pinned" />').parent().width($originalTable.find('th:first-child').outerWidth());
 
       this.isPinned = true;
 
